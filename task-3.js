@@ -7,7 +7,6 @@ const makeTransaction = transaction => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const canProcess = Math.random() > 0.3;
-
       if (canProcess) {
         const item = {
           id: transaction.id,
@@ -24,7 +23,6 @@ const makeTransaction = transaction => {
 const logSuccess = item => {
   console.log(`Transaction ${item.id} processed in ${item.time}ms`);
 };
-
 const logError = id => {
   console.warn(`Error processing transaction ${id}. Please try again later.`);
 };
